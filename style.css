@@ -1,0 +1,157 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles globaux pour le body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de la barre de navigation */
+nav {
+    background: linear-gradient(90deg, #8360c3, #2ebf91); /* dégradé de fond */
+    color: white; /* couleur du texte */
+    padding: 1em 2em; /* espacement intérieur */
+    display: flex; /* disposition flexbox */
+    align-items: center; /* alignement vertical des éléments */
+    justify-content: space-between; /* espace uniforme entre les éléments */
+    width: 100%; /* largeur complète */
+}
+
+/* Styles pour les listes dans la navbar */
+nav ul {
+    list-style: none; /* suppression des puces */
+    padding: 0; /* suppression de l'espacement intérieur */
+    display: flex; /* disposition flexbox */
+    gap: 20px; /* espace entre les éléments */
+}
+
+/* Style pour chaque élément de liste dans la navbar */
+nav li {
+    cursor: pointer; /* curseur de type "main" */
+}
+
+/* Style pour le logo du site */
+.site-logo {
+    width: 50px; /* largeur fixe */
+}
+
+/* Styles pour la disposition principale (contenant principal et aside) */
+.layout {
+    display: flex; /* disposition flexbox */
+    gap: 20px; /* espace entre les éléments */
+    padding: 20px; /* espacement intérieur */
+}
+
+/* Styles pour la section principale */
+main {
+    display: grid; /* disposition en grille */
+    grid-template-columns: repeat(2, 1fr); /* deux colonnes de même taille */
+    gap: 1rem; /* espace entre les éléments */
+    flex: 2; /* proportion de flex */
+}
+
+/* Styles pour l'élément aside */
+aside {
+    flex: 1; /* proportion de flex */
+}
+
+/* Styles pour chaque tweet */
+.tweet {
+    border: 1px solid #ddd; /* bordure */
+    padding: 15px; /* espacement intérieur */
+    margin-bottom: 15px; /* marge inférieure */
+    border-radius: 8px; /* coins arrondis */
+}
+
+/* Styles pour l'en-tête de chaque tweet */
+.tweet-header {
+    display: flex; /* disposition flexbox */
+    align-items: center; /* alignement vertical des éléments */
+}
+
+/* Style pour l'image de l'utilisateur dans un tweet */
+.user-image {
+    width: 50px; /* largeur fixe */
+    border-radius: 50%; /* forme circulaire */
+    margin-right: 10px; /* marge à droite */
+}
+
+/* Style pour le nom d'utilisateur dans un tweet */
+.user-info .username {
+    font-weight: bold; /* texte en gras */
+}
+
+/* Styles pour la section des tags populaires */
+.popular-tags {
+    border: 1px solid #ddd; /* bordure */
+    padding: 10px; /* espacement intérieur */
+}
+
+/* Styles pour la section des tags populaires en position sticky */
+.sticky-popular-tags {
+    position: sticky; /* position collante */
+    top: 0; /* positionnée en haut */
+    border: 1px solid #ddd; /* bordure */
+    padding: 10px; /* espacement intérieur */
+}
+
+/* Styles pour tous les éléments de liste */
+ul li {
+    list-style: none; /* suppression des puces */
+}
+
+/* Styles pour les liens centrés dans la navbar */
+.centered-links {
+    flex: 1; /* proportion de flex */
+    justify-content: center; /* centrage horizontal */
+}
+
+/* Styles pour les liens à droite dans la navbar */
+.right-links {
+    margin-left: auto; /* marge automatique à gauche pour les pousser à droite */
+}
+
+/* Styles pour les boutons Connexion et Inscription */
+.Connexion, .Inscription {
+    background-color: #444; /* couleur de fond */
+    padding: 5px 10px; /* espacement intérieur */
+    border-radius: 5px; /* coins arrondis */
+    cursor: pointer; /* curseur de type "main" */
+}
+
+/* Styles pour les boutons Connexion et Inscription lors du survol */
+.Connexion:hover, .Inscription:hover {
+    background-color: #555; /* couleur de fond lors du survol */
+}
+
+/* Styles spéciaux pour chaque 3ème tweet */
+.tweet:nth-child(3n) {
+    grid-column: 1 / span 2; /* occupe deux colonnes */
+}
+
+/* Styles pour les petits écrans (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    /* Disposition pour la section principale et l'aside */
+    .layout {
+        flex-direction: column; /* disposition verticale */
+    }
+
+    /* Ordre des éléments pour la version mobile */
+    aside {
+        order: 1;
+    }
+    main {
+        order: 2;
+    }
+
+    main, aside {
+        flex: none;
+        width: 100%;
+    }
+}
